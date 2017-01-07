@@ -47,7 +47,6 @@ public class UromSettings extends SettingsPreferenceFragment
 
     //urom
     private static final String DOZE_BRIGHTNESS_KEY = "doze_brightness";
-    private static final String LIGHTBAR_MODE_KEY = "lightbar_mode";
     private static final String COLOR_CALIBRATION_KEY = "color_calibration";
 
     private static final String MAINKEYS_MUSIC_KEY = "mainkeys_music";
