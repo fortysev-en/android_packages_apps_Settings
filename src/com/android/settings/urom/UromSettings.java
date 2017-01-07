@@ -36,6 +36,8 @@ import com.android.settings.R;
 import com.android.settings.SettingsActivity;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.urom.utils.HwScreenColors;
+import java.util.List;
+import java.util.ArrayList;
 
 public class UromSettings extends SettingsPreferenceFragment
         implements DialogInterface.OnClickListener, DialogInterface.OnDismissListener,
@@ -44,7 +46,7 @@ public class UromSettings extends SettingsPreferenceFragment
 
     //urom
     private static final String COLOR_CALIBRATION_KEY = "color_calibration";
-
+    private static final String DOZE_BRIGHTNESS_KEY = "doze_brightness";
     private static final String MAINKEYS_MUSIC_KEY = "mainkeys_music";
     private static final String MAINKEYS_MUSIC_PROPERTY = "persist.qemu.hw.mainkeys_music";
     private static final String CAMERAKEY_KEY = "camerakey";
@@ -128,7 +130,10 @@ public class UromSettings extends SettingsPreferenceFragment
         PreferenceCategory mCategory = null;
 
 	mCategory = (PreferenceCategory) findPreference("urom_shortcut_category");
-	if (removePref("eu.chainfire.supersu"))
+     if (!getResources().getBoolean(R.bool.config_urom_ambient)) {
+            mCategory.removePreference(findPreference(DOZE_BRIGHTNESS_KEY));
+     }
+    if (removePref("eu.chainfire.supersu"))
 	    mCategory.removePreference(findPreference("urom_shortcut_supersu_settings"));
 	if (removePref("com.lovejoy777.rroandlayersmanager"))
 	    mCategory.removePreference(findPreference("urom_shortcut_bitsyko_layers"));
@@ -170,10 +175,29 @@ public class UromSettings extends SettingsPreferenceFragment
 	if (!getResources().getBoolean(R.bool.config_urom_speakerprox)) {
 	    mCategory.removePreference(mDialer);
 	}
+     if (!getResources().getBoolean(R.bool.config_urom_lockscreen_phone)) {
+         mCategory.removePreference(mLockscreenPhone);
+         }
+
 	if (!getResources().getBoolean(R.bool.config_urom_jack_broken)) {
 	    mCategory.removePreference(mJackBroken);
 	}
     }
+
+    //Remove all empty categories
+    List<Preference> prefCatForRemove = new ArrayList<Preference>();
+    PreferenceScreen prefScreen = getPreferenceScreen();
+    int prefCount = prefScreen.getPreferenceCount();
+    for(int i=0; i<prefCount; i++) {
+        Preference pref = prefScreen.getPreference(i);
+        if (pref instanceof PreferenceCategory
+                && ((PreferenceCategory)pref).getPreferenceCount() == 0) {
+            prefCatForRemove.add(pref);
+     }
+      }
+    for(Preference pref: prefCatForRemove) {
+        prefScreen.removePreference(pref);
+        }
 
     private boolean removePref(String pkg) {
 	try {

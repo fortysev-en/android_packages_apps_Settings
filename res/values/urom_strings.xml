@@ -33,7 +33,7 @@
     <string name="urom_math_zero">0</string>
     <string name="urom_math_percentage">%1$d%%</string>
     <string name="urom_screen_adaptive">Adaptive</string>
-    <string name="urom_settings_title">nAOSP ROM Options</string>
+    <string name="urom_settings_title">Configurations</string>
     <string name="urom_status_bar_category">Status bar</string>
     <string name="urom_other_category">Other</string>
     <string name="urom_about">Information</string>
@@ -210,9 +210,12 @@
     <string name="urom_about_xda_title">XDA</string>
     <string name="urom_about_xda_summary">Thread of the ROM</string>
     <string name="urom_about_translation_title">Translation</string>
+    <string name="urom_about_translation_summary">Is your Launguage missing? Help us in Translating</string>
     <string name="urom_about_donation_title">Donation</string>
+    <string name="urom_about_donation_summary">Contribute to the Developer</string>
     <string name="urom_about_developers">Developers</string>
     <string name="urom_about_leaddeveloper">Lead Developer</string>
+    <string name="urom_about_leaddev">Lead Developer &amp; Contributer</string>
     <string name="urom_about_thanks">Thanks</string>
     <string name="urom_about_developer">Developer</string>
     <string name="urom_about_soundfx">Sound FX</string>

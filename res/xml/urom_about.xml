@@ -23,12 +23,15 @@
         <!-- Translation -->
         <Preference
             android:key="urom_translation"
-            android:title="@string/urom_about_translation_title" />
+            android:title="@string/urom_about_translation_title"
+            android:summary="@string/urom_about_translation_summary"
+        />
 
         <!-- Donation -->
         <Preference
             android:key="urom_donation"
-            android:title="@string/urom_about_donation_title" />
+            android:title="@string/urom_about_donation_title"
+            android:summary="@string/urom_about_donation_summary"/>
 
     </PreferenceCategory>
 
@@ -39,7 +42,7 @@
         <Preference
             android:key="urom_devs_field0"
             android:title="hitman-xda"
-            android:summary="@string/urom_about_leaddeveloper"/>
+            android:summary="@string/urom_about_leaddev"/>
 
         <Preference
             android:key="urom_devs_field1"
