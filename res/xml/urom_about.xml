@@ -33,6 +33,13 @@
             android:title="@string/urom_about_donation_title"
             android:summary="@string/urom_about_donation_summary"/>
 
+        <Preference
+            android:key="hit_drill"
+            android:title="@string/hit_drill_title"
+            android:summary="@string/hit_drill_summary"
+            android:fragment="com.android.settings.urom.thedrill"/>
+
+
     </PreferenceCategory>
 
     <PreferenceCategory

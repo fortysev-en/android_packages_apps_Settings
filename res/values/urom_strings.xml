@@ -38,6 +38,9 @@
     <string name="urom_other_category">Other</string>
     <string name="urom_about">Information</string>
 
+<!--hitman-xda-->
+    <string name="hit_drill_title">The Drill</string>
+    <string name="hit_drill_summary">Checkout The Drill</string>
 
     <!-- Settings -->
     <string name="urom_settings_reboot_summary">Please reboot your device to apply changes</string>
@@ -204,7 +207,7 @@
     <string name="jack_broken_summary">Manual plug/unplug for broken jack detection</string>
 
     <!-- About -->
-    <string name="urom_about_rom">Useful links</string>
+    <string name="urom_about_rom">Links</string>
     <string name="urom_about_source_title">Github</string>
     <string name="urom_about_source_summary">Checkout and contribute</string>
     <string name="urom_about_xda_title">XDA</string>
