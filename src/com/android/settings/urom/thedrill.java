@@ -27,6 +27,7 @@ public class thedrill extends SettingsPreferenceFragment {
         super.onResume();
     }
 
+
     @Override
     protected int getMetricsCategory() {
         return MetricsEvent.DISPLAY;
